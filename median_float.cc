@@ -10,8 +10,7 @@
 using namespace std;
 using namespace std::chrono;
  
-float median_nth_element(const std::vector<float>& d){
-	vector<float> vf = d;
+float median_nth_element(std::vector<float>& vf){
 	std::nth_element(vf.begin(), vf.begin()+ vf.size()/2, vf.end());
 	return vf[(vf.size()-1)/2];
 }
